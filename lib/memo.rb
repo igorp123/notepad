@@ -15,7 +15,9 @@ class Memo < Post
   end
 
   def to_string
+    time_string = "Создано: #{@created_at.strftime('%Y.%m.%d, %H:%M:%S')} \n\r"
 
+    @text.unshift(time_string)
   end
 
 end
